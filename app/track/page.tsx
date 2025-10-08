@@ -10,7 +10,6 @@ import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
-  HardDrive,
   Loader2,
   Search,
   CheckCircle,
@@ -21,6 +20,7 @@ import {
   Home,
   AlertCircle,
 } from "lucide-react"
+import Image from "next/image"
 
 interface OrderEvent {
   id: string
@@ -248,8 +248,14 @@ export default function TrackPage() {
       <header className="border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
+            <Image
+              src="/logo.jpg"        
+              alt="Not Cloud Storage Logo"
+              width={16}                
+              height={16}
+              className="rounded-md"   
+            />
+            <span className="text-base font-semibold">Not Cloud Storage</span>
           </Link>
           <nav className="flex items-center gap-6">
             <Link

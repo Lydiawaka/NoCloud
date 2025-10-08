@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Cloud, CreditCard, Package, Shield, Trash2, HardDrive } from "lucide-react"
+import Image from "next/image"  
 
 export default function HomePage() {
   return (
@@ -10,8 +11,14 @@ export default function HomePage() {
       <header className="border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
+            <Image
+              src="/logo.jpg"        
+              alt="Not Cloud Storage Logo"
+              width={16}                
+              height={16}
+              className="rounded-md"   
+            />
+            <span className="text-base font-semibold">Not Cloud Storage</span>
           </div>
           <nav className="flex items-center gap-6">
             <Link
