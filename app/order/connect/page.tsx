@@ -5,7 +5,8 @@ import { useSearchParams, useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { HardDrive, Loader2, AlertCircle } from "lucide-react"
+import { Loader2, AlertCircle } from "lucide-react"
+import { Navbar } from "@/components/navbar"
 
 function ConnectContent() {
   const searchParams = useSearchParams()
@@ -122,14 +123,7 @@ export default function ConnectPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
-          </Link>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="container mx-auto px-4 py-12">
         <Suspense

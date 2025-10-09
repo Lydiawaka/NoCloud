@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
 import { HardDrive, Loader2, AlertCircle, CreditCard } from "lucide-react"
+import { Navbar } from "@/components/navbar"
 
 interface StorageOption {
   type: "flash_drive" | "memory_card"
@@ -357,16 +358,9 @@ function CheckoutContent() {
 export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
-          </Link>
-        </div>
-      </header>
+      <Navbar />
 
-      <main className="container mx-auto px-4 py-12">
+      <div role="main" className="container mx-auto px-4 py-12">
         <Suspense
           fallback={
             <div className="text-center">
@@ -376,7 +370,7 @@ export default function CheckoutPage() {
         >
           <CheckoutContent />
         </Suspense>
-      </main>
+      </div>
     </div>
   )
 }

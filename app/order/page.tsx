@@ -2,30 +2,13 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { HardDrive } from "lucide-react"
+import { Navbar } from "@/components/navbar"
 
 export default function OrderPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link
-              href="/how-it-works"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              How It Works
-            </Link>
-            <Link href="/track" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Track Order
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">

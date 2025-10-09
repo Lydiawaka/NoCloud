@@ -20,7 +20,8 @@ import {
   Home,
   AlertCircle,
 } from "lucide-react"
-import Image from "next/image"
+import { Navbar } from "@/components/navbar"
+
 
 interface OrderEvent {
   id: string
@@ -245,31 +246,7 @@ function TrackingContent() {
 export default function TrackPage() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.jpg"        
-              alt="Not Cloud Storage Logo"
-              width={16}                
-              height={16}
-              className="rounded-md"   
-            />
-            <span className="text-base font-semibold">Not Cloud Storage</span>
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link
-              href="/how-it-works"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              How It Works
-            </Link>
-            <Button asChild size="sm">
-              <Link href="/order">Get Started</Link>
-            </Button>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="container mx-auto px-4 py-12">
         <Suspense

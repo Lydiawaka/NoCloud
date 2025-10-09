@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { HardDrive, CheckCircle, Loader2, AlertCircle } from "lucide-react"
+import { Navbar } from "@/components/navbar"
 
 interface Order {
   orderNumber: string
@@ -141,14 +142,7 @@ function ConfirmationContent() {
 export default function ConfirmationPage() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <HardDrive className="h-6 w-6 text-primary" />
-            <span className="text-xl font-semibold">Not Cloud Storage</span>
-          </Link>
-        </div>
-      </header>
+     <Navbar />
 
       <main className="container mx-auto px-4 py-12">
         <Suspense
